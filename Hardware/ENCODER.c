@@ -192,7 +192,6 @@ int READ_SPEED(int TIMx)
     return value;
 }
 
-
 /************************
  * 清除编码器标志位
  */

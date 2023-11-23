@@ -25,8 +25,8 @@ Peripheral/src/ch32v30x_exti.o: ../Peripheral/src/ch32v30x_exti.c \
  E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_usart.h \
  E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_wwdg.h \
  E:\MouRiverPro\Gyro\ balance\ vehicle\User/ch32v30x_it.h \
- E:\MouRiverPro\Gyro\ balance\ vehicle\Debug/debug.h \
- E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_debug.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_typedef.h \
  E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_misc.h
 
 E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_exti.h:
@@ -81,8 +81,8 @@ E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_wwdg.h:
 
 E:\MouRiverPro\Gyro\ balance\ vehicle\User/ch32v30x_it.h:
 
-E:\MouRiverPro\Gyro\ balance\ vehicle\Debug/debug.h:
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_debug.h:
 
-E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x.h:
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_typedef.h:
 
 E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_misc.h:

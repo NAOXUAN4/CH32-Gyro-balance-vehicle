@@ -26,11 +26,29 @@ User/main.o: ../User/main.c \
  E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_usart.h \
  E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_wwdg.h \
  E:\MouRiverPro\Gyro\ balance\ vehicle\User/ch32v30x_it.h \
- E:\MouRiverPro\Gyro\ balance\ vehicle\Debug/debug.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_debug.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_typedef.h \
  E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_misc.h \
  E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/PWM.h \
- E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/lcd.h \
- E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/lcd_init.h
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_tft180.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_clock.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_debug.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_font.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_function.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_delay.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_spi.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_gpio.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/MONLCD.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/ENCODER.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_mpu6050.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_soft_iic.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/filter.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_headfile.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_interrupt.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\sys/sys.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_uart.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_tft180.h \
+ E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_mpu6050.h
 
 E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x.h:
 
@@ -86,12 +104,48 @@ E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_wwdg.h:
 
 E:\MouRiverPro\Gyro\ balance\ vehicle\User/ch32v30x_it.h:
 
-E:\MouRiverPro\Gyro\ balance\ vehicle\Debug/debug.h:
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_debug.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_typedef.h:
 
 E:\MouRiverPro\Gyro\ balance\ vehicle\Peripheral\inc/ch32v30x_misc.h:
 
 E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/PWM.h:
 
-E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/lcd.h:
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_tft180.h:
 
-E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/lcd_init.h:
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_clock.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_debug.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_font.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_function.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_delay.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_spi.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_gpio.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/MONLCD.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\Hardware/ENCODER.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_mpu6050.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_soft_iic.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/filter.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_headfile.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_common_interrupt.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\sys/sys.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_driver_uart.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_tft180.h:
+
+E:\MouRiverPro\Gyro\ balance\ vehicle\zf/zf_device_mpu6050.h:

@@ -9,7 +9,9 @@
 #define HARDWARE_MONLCD_H_
 
 
-
+void MONLCD_init(void);
+void MONLCD_ENCO(void);
+void MONLCD_MPU(void);
 
 
 #endif /* HARDWARE_MONLCD_H_ */

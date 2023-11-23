@@ -9,12 +9,12 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include zf/subdir.mk
 -include sys/subdir.mk
 -include User/subdir.mk
 -include Startup/subdir.mk
 -include Peripheral/src/subdir.mk
 -include Hardware/subdir.mk
--include Debug/subdir.mk
 -include Core/subdir.mk
 -include subdir.mk
 -include objects.mk
