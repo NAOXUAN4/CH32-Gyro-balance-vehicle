@@ -26,6 +26,8 @@ void MOTOR_DC_B_SPEED(int8_t MOTOR_SPEED)
     PWM_CRR_TIM8(MOTOR_SPEED);
 
 }
+
+
 void MOTOR_EXIT()
 {
     TIM_SetCompare1(TIM8,0);

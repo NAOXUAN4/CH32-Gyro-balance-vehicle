@@ -6,6 +6,7 @@
  */
 
 #include "ch32v30x.h"
+#include "math.h"
 
 
 
@@ -114,14 +115,16 @@ void PWM_TIM8_Init(u16 psc,u16 arr)
 
 
 
-void PWM_CRR_TIM4(int16_t compareA)
+void PWM_CRR_TIM4(int32_t compareA)
 {
     if (compareA <= 0)
     {
+        if(compareA<-100)compareA = -100;
         TIM_SetCompare3(TIM4,-compareA); //r b
     }
     else
     {
+        if(compareA>100)compareA = 100;
         TIM_SetCompare2(TIM4,compareA);// l f
     }
 
@@ -129,17 +132,18 @@ void PWM_CRR_TIM4(int16_t compareA)
 
 }
 
-
-
-void PWM_CRR_TIM8(int16_t compareB)
+void PWM_CRR_TIM8(int32_t compareB)
 {
 
     if (compareB <= 0)
         {
+
+        if(compareB<-100)compareB = -100;
             TIM_SetCompare2(TIM8,-compareB); //l b
         }
         else
         {
+            if(compareB>100)compareB = 100;
             TIM_SetCompare1(TIM8,compareB);// l f
         }
 

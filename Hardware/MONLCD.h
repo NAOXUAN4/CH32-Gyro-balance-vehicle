@@ -10,8 +10,8 @@
 
 
 void MONLCD_init(void);
-void MONLCD_ENCO(void);
-void MONLCD_MPU(void);
+void MONLCD_ENCO(int ENCO_A,int ENCO_B);
+void MONLCD_MPU(float ANgle);
 
 
 #endif /* HARDWARE_MONLCD_H_ */

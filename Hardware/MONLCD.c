@@ -7,12 +7,8 @@
 
 #include "MONLCD.h"
 #include "ch32v30x.h"
-#include "ENCODER.h"
 #include "zf_device_tft180.h"
-#include "zf_device_mpu6050.h"
 
-int ENCO_A = 0, ENCO_B = 0;
-float ANgle = 0;
 
 
 void MONLCD_init()
@@ -32,10 +28,9 @@ void MONLCD_init()
 
 }
 
-void MONLCD_ENCO()
+void MONLCD_ENCO(int ENCO_A,int ENCO_B)
 {
-   ENCO_A = READ_SPEED(1);
-   ENCO_B = READ_SPEED(9);
+
 
    tft180_set_color(RGB565_BLUE, RGB565_WHITE);
    tft180_show_int(120, 45, ENCO_A, 2);
@@ -43,13 +38,11 @@ void MONLCD_ENCO()
 
 }
 
-void MONLCD_MPU()
+void MONLCD_MPU(float ANgle)
 {
-    Get_Angle();
-    ANgle = mpu.angle;
+
     tft180_set_color(RGB565_BLUE, RGB565_WHITE);
     tft180_show_float(95, 25, ANgle, 4, 1);
-
 
 }
 

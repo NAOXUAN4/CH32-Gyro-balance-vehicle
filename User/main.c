@@ -34,8 +34,7 @@ int main(void)
 
     while(1)
     {
-        MONLCD_ENCO();
-        MONLCD_MPU();
+
     }
 
     //TIM_SetCompare3(TIM4, 40); // r b

@@ -46,8 +46,6 @@ float CalcPosiPidOut(PosiPidNode *pid, float expc, float curr)
 	
     float ep=0, ei=0, ed=0;
     float posi_out=0;
-    
-	//OLED_ShowNum(3,1,(int)(pid->kp),4);
 	
 	
     pid ->error_curr = expc - curr;
@@ -58,11 +56,6 @@ float CalcPosiPidOut(PosiPidNode *pid, float expc, float curr)
     ed = pid ->error_curr - pid ->error_last;
 
     posi_out = pid->kp * ep + pid->ki * ei + pid->kd * ed;
-	
-	
-	
-	
-	//OLED_ShowNum(3,1,(int)posi_out,6);
 	
 	
 	
@@ -77,8 +70,6 @@ float CalcPosiPidOut(PosiPidNode *pid, float expc, float curr)
     }
 
     pid ->error_last = pid ->error_curr;
-
-	OLED_ShowNum(3,1,(int)posi_out,6);
 	
     return posi_out;
 }

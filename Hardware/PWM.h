@@ -11,8 +11,8 @@
 
 void PWM_TIM8_Init(u16 arr,u16 psc);
 void PWM_TIM4_Init(u16 arr,u16 psc);
-void PWM_CRR_TIM4(int16_t compareA);
-void PWM_CRR_TIM8(int16_t compareB);
+void PWM_CRR_TIM4(int32_t compareA);
+void PWM_CRR_TIM8(int32_t compareB);
 
 
 #endif /* HARDWARE_PWM_H_ */

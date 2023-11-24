@@ -16,7 +16,7 @@ void MPU6050exit_init()
     GPIO_InitTypeDef GPIO_STU;
     GPIO_StructInit(&GPIO_STU);
     GPIO_STU.GPIO_Speed= GPIO_Speed_50MHz;
-    GPIO_STU.GPIO_Mode= GPIO_Mode_AF_PP;
+    GPIO_STU.GPIO_Mode= GPIO_Mode_IPU;
     GPIO_STU.GPIO_Pin= GPIO_Pin_5;
     GPIO_Init(GPIOB,&GPIO_STU);
 
