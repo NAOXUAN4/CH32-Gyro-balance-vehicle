@@ -14,8 +14,8 @@
 PosiPidNode vRing;
 PosiPidNode sRing;
 
-float vRingConfig[3] = {1,1,0}; // kp ki
-float sRingConfig[3] = {1,0,1};  //kp kd
+float vRingConfig[3] = {10,3,0}; // kp ki
+float sRingConfig[3] = {10,0,1};  //kp kd
 float Mid = 2.5;
 float v_expect = 0;
 
@@ -120,11 +120,11 @@ void TIM3_IRQHandler()
     {
         if (1)
         {
-            PWM_CRR_TIM4(40);
-            PWM_CRR_TIM8(40);
+            //PWM_CRR_TIM4(40);
+            //PWM_CRR_TIM8(40);
 
             TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-            /*
+
 
             ENCO_A = READ_SPEED(1);
             ENCO_B = READ_SPEED(9);
@@ -134,6 +134,8 @@ void TIM3_IRQHandler()
 
             MON_Control();
 
+
+
             vRing_Out = PID_vRing(ENCO_A, ENCO_B, v_expect);
 
             PID_Out = PID_sRing(ANgle, Mid, vRing_Out);
@@ -141,7 +143,7 @@ void TIM3_IRQHandler()
             MOTOR_DC_A_SPEED(PID_Out);
             MOTOR_DC_B_SPEED(PID_Out);
 
-            */
+
         }
 
     }
