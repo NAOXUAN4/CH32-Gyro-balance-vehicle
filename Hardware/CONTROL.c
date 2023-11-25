@@ -31,7 +31,6 @@ void PID_init()
     SetPosiPidParm(&vRing, vRingConfig[0], vRingConfig[1], vRingConfig[2]);
 }
 
-
 /*********************
  * 屏幕控制
  */
@@ -41,9 +40,6 @@ void MON_Control(void)
     MONLCD_ENCO(ENCO_A,ENCO_B);
     MONLCD_MPU(ANgle);
 }
-
-
-
 
 /******************
  * 直立环
@@ -76,13 +72,60 @@ float PID_vRing(int ECO_A, int ECO_B, int v_ecpect)
     return vRing_OUT;
 }
 
-void EXIT_9_5IRQHandler()
+
+void Car_ClockInit()
 {
-    if (EXTI_GetITStatus(EXTI_Line5))
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+
+    /*
+    //打开AFIO，选择路线配置为中断模式
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
+    GPIO_EXTILineConfig(GPIO_PortSourceGPIOB,GPIO_PinSource0);
+    */
+
+    TIM_TimeBaseInitTypeDef timerInitStructure;
+
+    // 使能定时器时钟
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+
+    timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+    timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    timerInitStructure.TIM_Period = 1000000/72000000 - 1;
+    timerInitStructure.TIM_Prescaler = 72 - 1;
+    timerInitStructure.TIM_RepetitionCounter = 0;
+
+    // 初始化定时器配置
+    TIM_TimeBaseInit(TIM3, &timerInitStructure);
+
+    // 使能定时器中断
+    TIM_ITConfig(TIM3,TIM_IT_Update,ENABLE);
+
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    NVIC_InitTypeDef TIM3_NVIC;
+    TIM3_NVIC.NVIC_IRQChannel = TIM3_IRQn;
+    TIM3_NVIC.NVIC_IRQChannelCmd = ENABLE;
+    TIM3_NVIC.NVIC_IRQChannelPreemptionPriority = 0;
+    TIM3_NVIC.NVIC_IRQChannelSubPriority = 0;
+    NVIC_Init(&TIM3_NVIC);
+
+    // 使能定时器
+    TIM_Cmd(TIM3, ENABLE);
+}
+
+
+
+void TIM3_IRQHandler()
+{
+    if (TIM_GetITStatus(TIM3, TIM_IT_Update))
     {
-        if (!PBin(5))
+        if (1)
         {
-            EXTI_ClearFlag(EXTI_Line5);
+            PWM_CRR_TIM4(40);
+            PWM_CRR_TIM8(40);
+
+            TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
+            /*
+
             ENCO_A = READ_SPEED(1);
             ENCO_B = READ_SPEED(9);
 
@@ -98,7 +141,7 @@ void EXIT_9_5IRQHandler()
             MOTOR_DC_A_SPEED(PID_Out);
             MOTOR_DC_B_SPEED(PID_Out);
 
-
+            */
         }
 
     }

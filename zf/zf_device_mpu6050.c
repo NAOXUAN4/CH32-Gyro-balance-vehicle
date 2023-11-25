@@ -1,28 +1,28 @@
 /*********************************************************************************************************************
 * COPYRIGHT NOTICE
-* Copyright (c) 2019,Öð·É¿Æ¼¼
+* Copyright (c) 2019,ï¿½ï¿½É¿Æ¼ï¿½
 * All rights reserved.
 *
-* ÒÔÏÂËùÓÐÄÚÈÝ°æÈ¨¾ùÊôÖð·É¿Æ¼¼ËùÓÐ£¬Î´¾­ÔÊÐí²»µÃÓÃÓÚÉÌÒµÓÃÍ¾£¬
-* »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò£¬ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷¡£
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý°ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Í¾ï¿½ï¿½
+* ï¿½ï¿½Ó­ï¿½ï¿½Î»Ê¹ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ë±£ï¿½ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½Ä°ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 *
 * @file             zf_device_mpu6050
-* @company          ³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
-* @author           Öð·É¿Æ¼¼(QQ790875685)
-* @version          ²é¿´docÄÚversionÎÄ¼þ °æ±¾ËµÃ÷
+* @company          ï¿½É¶ï¿½ï¿½ï¿½É¿Æ¼ï¿½ï¿½ï¿½ï¿½Þ¹ï¿½Ë¾
+* @author           ï¿½ï¿½É¿Æ¼ï¿½(QQ790875685)
+* @version          ï¿½é¿´docï¿½ï¿½versionï¿½Ä¼ï¿½ ï¿½æ±¾Ëµï¿½ï¿½
 * @Software         MounRiver Studio V1.51
 * @Target core      CH32V307VCT6
 * @Taobao           https://seekfree.taobao.com/
 * @date             2021-11-25
-* @note             ½ÓÏß¶¨Òå£º
+* @note             ï¿½ï¿½ï¿½ß¶ï¿½ï¿½å£º
 *                   ------------------------------------
-*                   Ä£¿é¹Ü½Å                                        µ¥Æ¬»ú¹Ü½Å
-*                   Èí¼þ IIC Í¨ÐÅÒý½Å¶ÔÓ¦¹ØÏµ
-*                   SCL                 ²é¿´ zf_device_mpu6050.h ÖÐ MPU6050_SOFT_IIC_SCL ºê¶¨Òå
-*                   SDA                 ²é¿´ zf_device_mpu6050.h ÖÐ MPU6050_SOFT_IIC_SDA ºê¶¨Òå
-*                   Ó²¼þ IIC Í¨ÐÅÒý½Å¶ÔÓ¦¹ØÏµ
-*                   SCL                 ²é¿´ zf_device_mpu6050.h ÖÐ MPU6050_IIC_SCL ºê¶¨Òå
-*                   SDA                 ²é¿´ zf_device_mpu6050.h ÖÐ MPU6050_IIC_SDA ºê¶¨Òå
+*                   Ä£ï¿½ï¿½Ü½ï¿½                                        ï¿½ï¿½Æ¬ï¿½ï¿½ï¿½Ü½ï¿½
+*                   ï¿½ï¿½ï¿½ï¿½ IIC Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Å¶ï¿½Ó¦ï¿½ï¿½Ïµ
+*                   SCL                 ï¿½é¿´ zf_device_mpu6050.h ï¿½ï¿½ MPU6050_SOFT_IIC_SCL ï¿½ê¶¨ï¿½ï¿½
+*                   SDA                 ï¿½é¿´ zf_device_mpu6050.h ï¿½ï¿½ MPU6050_SOFT_IIC_SDA ï¿½ê¶¨ï¿½ï¿½
+*                   Ó²ï¿½ï¿½ IIC Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Å¶ï¿½Ó¦ï¿½ï¿½Ïµ
+*                   SCL                 ï¿½é¿´ zf_device_mpu6050.h ï¿½ï¿½ MPU6050_IIC_SCL ï¿½ê¶¨ï¿½ï¿½
+*                   SDA                 ï¿½é¿´ zf_device_mpu6050.h ï¿½ï¿½ MPU6050_IIC_SDA ï¿½ê¶¨ï¿½ï¿½
 *                   ------------------------------------
 ********************************************************************************************************************/
 
@@ -38,17 +38,17 @@ static soft_iic_info_struct mpu6050_iic_struct;
 MpuNode mpu;
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       MPU6050 ×Ô¼ì ÄÚ²¿µ÷ÓÃ
+// @brief       MPU6050 ï¿½Ô¼ï¿½ ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½
 // @param       void
-// @return      uint8         1-×Ô¼ìÊ§°Ü 0-×Ô¼ì³É¹¦
+// @return      uint8         1-ï¿½Ô¼ï¿½Ê§ï¿½ï¿½ 0-ï¿½Ô¼ï¿½É¹ï¿½
 //-------------------------------------------------------------------------------------------------------------------
 static uint8 mpu6050_self1_check(void)
 {
     uint8 dat = 0;
     volatile int16 timeout_count = MPU6050_TIMEOUT_COUNT;
 
-    mpu6050_write_register(PWR_MGMT_1, 0x00);                                   // ½â³ýÐÝÃß×´Ì¬
-    mpu6050_write_register(SMPLRT_DIV, 0x07);                                   // 125HZ²ÉÑùÂÊ
+    mpu6050_write_register(PWR_MGMT_1, 0x00);                                   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+    mpu6050_write_register(SMPLRT_DIV, 0x07);                                   // 125HZï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     while(0x07 != dat && timeout_count)
     {
         timeout_count--;
@@ -62,9 +62,9 @@ static uint8 mpu6050_self1_check(void)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       ³õÊ¼»¯ MPU6050
+// @brief       ï¿½ï¿½Ê¼ï¿½ï¿½ MPU6050
 // @param       void
-// @return      uint8         1-³õÊ¼»¯Ê§°Ü 0-³õÊ¼»¯³É¹¦
+// @return      uint8         1-ï¿½ï¿½Ê¼ï¿½ï¿½Ê§ï¿½ï¿½ 0-ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½É¹ï¿½
 // Sample usage:
 //-------------------------------------------------------------------------------------------------------------------
 uint8 mpu6050_init (void)
@@ -72,21 +72,21 @@ uint8 mpu6050_init (void)
 
     soft_iic_init(&mpu6050_iic_struct, MPU6050_DEV_ADDR, MPU6050_SOFT_IIC_DELAY, MPU6050_SCL_PIN, MPU6050_SDA_PIN);
 
-    system_delay_ms(100);                                                       // ÉÏµçÑÓÊ±
+    system_delay_ms(100);                                                       // ï¿½Ïµï¿½ï¿½ï¿½Ê±
 
     if(mpu6050_self1_check())
     {
         zf_log(0, "MPU6050 self check error.");
         return 1;
     }
-    mpu6050_write_register(PWR_MGMT_1, 0x00);                                   // ½â³ýÐÝÃß×´Ì¬
-    mpu6050_write_register(SMPLRT_DIV, 4);                                      // 200HZ²ÉÑùÂÊ 1k/(N+1)
+    mpu6050_write_register(PWR_MGMT_1, 0x00);                                   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+    mpu6050_write_register(SMPLRT_DIV, 4);                                      // 200HZï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1k/(N+1)
 
 
     //mpu6050_write_register(MPU6050_CONFIG, 0x06);
 
     mpu6050_write_register(GYRO_CONFIG, 0x18);                                  // 2000
-    mpu6050_write_register(ACCEL_CONFIG, 0x00);                                 //¼ÓËÙ¶È¶È×î´óÁ¿³Ì +-2G
+    mpu6050_write_register(ACCEL_CONFIG, 0x00);                                 //ï¿½ï¿½ï¿½Ù¶È¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ +-2G
 
     mpu6050_write_register(USER_CONTROL, 0x00);
     mpu6050_write_register(INT_PIN_CFG, 0x02);
@@ -94,38 +94,38 @@ uint8 mpu6050_init (void)
 }
 
 
-//ÏÂÃæÊÇÒÆÖ²µÄ½âËã²¿·Ö´úÂë=========================================================================================================================================================
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½Ä½ï¿½ï¿½ã²¿ï¿½Ö´ï¿½ï¿½ï¿½=========================================================================================================================================================
 
 void Get_Angle(void)
 {
     float Accel_Y,Accel_X,Accel_Z,Gyro_X,Gyro_Y,Gyro_Z;
-    Gyro_X=(mpu6050_read_register(GYRO_XOUT_H)<<8)+mpu6050_read_register(GYRO_XOUT_L);    //¶ÁÈ¡XÖáÍÓÂÝÒÇ
-    Gyro_Y=(mpu6050_read_register(GYRO_YOUT_H)<<8)+mpu6050_read_register(GYRO_YOUT_L);    //¶ÁÈ¡YÖáÍÓÂÝÒÇ
-    Gyro_Z=(mpu6050_read_register(GYRO_ZOUT_H)<<8)+mpu6050_read_register(GYRO_ZOUT_L);    //¶ÁÈ¡YÖáÍÓÂÝÒÇ
-    Accel_Y=(mpu6050_read_register(ACCEL_YOUT_H)<<8)+mpu6050_read_register(ACCEL_YOUT_L);    //¶ÁÈ¡ZÖáÍÓÂÝÒÇ
-    Accel_X=(mpu6050_read_register(ACCEL_XOUT_H)<<8)+mpu6050_read_register(ACCEL_XOUT_L); //¶ÁÈ¡XÖá¼ÓËÙ¶È¼Æ
-    Accel_Z=(mpu6050_read_register(ACCEL_ZOUT_H)<<8)+mpu6050_read_register(ACCEL_ZOUT_L); //¶ÁÈ¡ZÖá¼ÓËÙ¶È¼Æ
-    if(Gyro_Y>32768)  Gyro_Y-=65536;                       //Êý¾ÝÀàÐÍ×ª»»  Ò²¿ÉÍ¨¹ýshortÇ¿ÖÆÀàÐÍ×ª»»
-    if(Gyro_Z>32768)  Gyro_Z-=65536;                       //Êý¾ÝÀàÐÍ×ª»»
-    if(Gyro_X>32768)  Gyro_X-=65536;                       //Êý¾ÝÀàÐÍ×ª»»
-    if(Accel_X>32768) Accel_X-=65536;                      //Êý¾ÝÀàÐÍ×ª»»
-    if(Accel_Z>32768) Accel_Z-=65536;                      //Êý¾ÝÀàÐÍ×ª»»
-    if(Accel_Y>32768) Accel_Y-=65536;                      //Êý¾ÝÀàÐÍ×ª»»
+    Gyro_X=(mpu6050_read_register(GYRO_XOUT_H)<<8)+mpu6050_read_register(GYRO_XOUT_L);    //ï¿½ï¿½È¡Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    Gyro_Y=(mpu6050_read_register(GYRO_YOUT_H)<<8)+mpu6050_read_register(GYRO_YOUT_L);    //ï¿½ï¿½È¡Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    Gyro_Z=(mpu6050_read_register(GYRO_ZOUT_H)<<8)+mpu6050_read_register(GYRO_ZOUT_L);    //ï¿½ï¿½È¡Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    Accel_Y=(mpu6050_read_register(ACCEL_YOUT_H)<<8)+mpu6050_read_register(ACCEL_YOUT_L);    //ï¿½ï¿½È¡Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    Accel_X=(mpu6050_read_register(ACCEL_XOUT_H)<<8)+mpu6050_read_register(ACCEL_XOUT_L); //ï¿½ï¿½È¡Xï¿½ï¿½ï¿½ï¿½Ù¶È¼ï¿½
+    Accel_Z=(mpu6050_read_register(ACCEL_ZOUT_H)<<8)+mpu6050_read_register(ACCEL_ZOUT_L); //ï¿½ï¿½È¡Zï¿½ï¿½ï¿½ï¿½Ù¶È¼ï¿½
+    if(Gyro_Y>32768)  Gyro_Y-=65536;                       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½  Ò²ï¿½ï¿½Í¨ï¿½ï¿½shortÇ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+    if(Gyro_Z>32768)  Gyro_Z-=65536;                       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+    if(Gyro_X>32768)  Gyro_X-=65536;                       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+    if(Accel_X>32768) Accel_X-=65536;                      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+    if(Accel_Z>32768) Accel_Z-=65536;                      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+    if(Accel_Y>32768) Accel_Y-=65536;                      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
 
-    Accel_Y=atan2(Accel_X,Accel_Z)*180/PI;                 //¼ÆËãÇã½Ç
+    Accel_Y=atan2(Accel_X,Accel_Z)*180/PI;                 //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     mpu.acc_y=Accel_Y;
 
-    Gyro_X=Gyro_X/16.4;                                         //ÍÓÂÝÒÇÁ¿³Ì×ª»»
+    Gyro_X=Gyro_X/16.4;                                         //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
     mpu.gyro_x=Gyro_X;
-    Gyro_Y=Gyro_Y/16.4;                                         //ÍÓÂÝÒÇÁ¿³Ì×ª»»
+    Gyro_Y=Gyro_Y/16.4;                                         //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
     mpu.gyro_y=Gyro_Y;
-    Gyro_Z=Gyro_Z/16.4;                                         //ÍÓÂÝÒÇÁ¿³Ì×ª»»
+    Gyro_Z=Gyro_Z/16.4;                                         //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
     mpu.gyro_Z=Gyro_Z;
 
-    Kalman_Filter(Accel_Y,-Gyro_Y);//¿¨¶ûÂüÂË²¨
+    Kalman_Filter(Accel_Y,-Gyro_Y);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½
 
 
-    mpu.angle = angle;                                       //¸üÐÂÆ½ºâÇã½Ç
+    mpu.angle = angle;                                       //ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 }

@@ -55,7 +55,7 @@ all: Gyro\ balance\ vehicle.elf secondary-outputs
 
 # 工具调用
 Gyro\ balance\ vehicle.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32imacxw -mabi=ilp32 -msmall-data-limit=8 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "E:\MouRiverPro\Gyro balance vehicle\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Gyro balance vehicle.map" --specs=nano.specs --specs=nosys.specs -o "Gyro balance vehicle.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@	@	riscv-none-embed-gcc -march=rv32imacxw -mabi=ilp32 -msmall-data-limit=8 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "H:\MounRiver\CH32-Gyro-balance-vehicle\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"Gyro balance vehicle.map" --specs=nano.specs --specs=nosys.specs -o "Gyro balance vehicle.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@	@
 Gyro\ balance\ vehicle.hex: Gyro\ balance\ vehicle.elf
 	@	riscv-none-embed-objcopy -O ihex "Gyro balance vehicle.elf"  "Gyro balance vehicle.hex"

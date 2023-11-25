@@ -15,6 +15,7 @@ void MONLCD_init()
 {
     tft180_set_dir(TFT180_CROSSWISE_180);
     tft180_init();
+    tft180_clear();
     tft180_full(RGB565_GREEN);
 
     tft180_set_color(RGB565_BLUE, RGB565_WHITE);
