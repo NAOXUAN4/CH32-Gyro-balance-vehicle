@@ -120,11 +120,15 @@ void PWM_CRR_TIM4(int32_t compareA)
     if (compareA <= 0)
     {
         if(compareA<-100)compareA = -100;
+        //if(compareA>-20)compareA = -20;
         TIM_SetCompare3(TIM4,-compareA); //r b
+        TIM_SetCompare2(TIM4,0);// l f
     }
     else
     {
         if(compareA>100)compareA = 100;
+        //if (compareA<20)compareA = 20;
+        TIM_SetCompare3(TIM4, 0);
         TIM_SetCompare2(TIM4,compareA);// l f
     }
 
@@ -139,12 +143,17 @@ void PWM_CRR_TIM8(int32_t compareB)
         {
 
         if(compareB<-100)compareB = -100;
-            TIM_SetCompare2(TIM8,-compareB); //l b
+        //if (compareB>-20)compareB = 20;
+        TIM_SetCompare2(TIM8,-compareB); //l b
+        TIM_SetCompare1(TIM8,0);// l f
+
         }
         else
         {
             if(compareB>100)compareB = 100;
+            //if(compareB<20)compareB = 20;
             TIM_SetCompare1(TIM8,compareB);// l f
+            TIM_SetCompare2(TIM8,0); //l b
         }
 
 

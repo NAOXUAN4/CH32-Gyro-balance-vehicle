@@ -14,6 +14,7 @@ void TIM3_IRQHandler(void);
 int PID_sRing(float Angle, float Mid, float vRing_Out);
 float vRing(int ECO_A, int ECO_B, int v_ecpect);
 void MON_Control(void);
+void Car_ClockInit(void);
 
 
 
